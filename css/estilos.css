@@ -849,7 +849,6 @@ footer a:hover {
 
 }
 
-```css
 /* DISTRIBUCIÓN DE LAS TARJETAS DEL EQUIPO */
 .nosotros-equipo .nosotros-grid {
     display: grid;
@@ -936,4 +935,3 @@ footer a:hover {
         height: 70px;
     }
 }
-```
