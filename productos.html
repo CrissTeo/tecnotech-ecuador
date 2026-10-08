@@ -1,27 +1,294 @@
-
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tecnotech Ecuador</title>
+    <meta name="description" content="Catálogo de laptops, impresoras, celulares y servicios técnicos de Tecnotech Ecuador.">
+    <title>Productos | Tecnotech Ecuador</title>
     <link rel="stylesheet" href="css/estilos.css">
 </head>
+
 <body>
+
+    <!-- ENCABEZADO -->
     <header>
-        <h1>Tecnotech Ecuador</h1>
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="nosotros.html">Nosotros</a>
-            <a href="productos.html">Productos</a>
-            <a href="contactos.html">Contactos</a>
-        </nav>
+        <div class="contenedor encabezado">
+
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo-tecnotech.png"
+                         alt="Logotipo Tecnotech Ecuador">
+                </a>
+            </div>
+
+            <nav aria-label="Navegación principal">
+                <a href="index.html">Inicio</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="productos.html" aria-current="page">Productos</a>
+                <a href="contactos.html">Contactos</a>
+            </nav>
+
+        </div>
     </header>
 
     <main>
-        <h2>Contenido de la página</h2>
-        <p>Sección en desarrollo.</p>
+
+        <!-- BANNER -->
+        <section class="productos-banner">
+            <div class="contenedor">
+                <h1>Explora nuestros productos</h1>
+                <p>
+                    Tecnología para estudiar, trabajar,
+                    crear y mantenerte conectado.
+                </p>
+                <a href="#catalogo" class="btn btn-principal">
+                    Explorar catálogo
+                </a>
+            </div>
+        </section>
+
+        <!-- NAVEGACIÓN POR CATEGORÍAS -->
+        <div class="productos-navegacion contenedor">
+            <a href="#laptops">Laptops</a>
+            <a href="#impresoras">Impresoras</a>
+            <a href="#celulares">Celulares</a>
+            <a href="#servicios">Servicio técnico</a>
+        </div>
+
+        <div id="catalogo">
+
+            <!-- LAPTOPS -->
+            <section id="laptops" class="productos-seccion">
+                <div class="contenedor">
+                    <h2>Laptops</h2>
+                    <p class="productos-descripcion">
+                        Encuentra el equipo ideal para tus
+                        actividades académicas y profesionales.
+                    </p>
+
+                    <div class="productos-grid">
+
+                        <article class="producto-card">
+                            <img src="img/laptop-estudiante.jpg"
+                                 alt="Laptop para estudiantes"
+                                 loading="lazy">
+
+                            <div class="producto-info">
+                                <span class="producto-etiqueta">Laptops</span>
+                                <h3>Laptop para estudiantes</h3>
+                                <p>
+                                    Ideal para clases virtuales,
+                                    ofimática, navegación y tareas.
+                                </p>
+                                <a href="mailto:tecnotechec@gmail.com?subject=Consulta%20laptop%20estudiantes"
+                                   class="producto-boton">
+                                    Consultar disponibilidad
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="producto-card">
+                            <img src="img/laptop-profesional.jpg"
+                                 alt="Laptop para profesionales"
+                                 loading="lazy">
+
+                            <div class="producto-info">
+                                <span class="producto-etiqueta">Laptops</span>
+                                <h3>Laptop profesional</h3>
+                                <p>
+                                    Equipos para productividad,
+                                    multitarea y aplicaciones laborales.
+                                </p>
+                                <a href="mailto:tecnotechec@gmail.com?subject=Consulta%20laptop%20profesional"
+                                   class="producto-boton">
+                                    Consultar disponibilidad
+                                </a>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- IMPRESORAS -->
+            <section id="impresoras" class="productos-seccion productos-alterno">
+                <div class="contenedor">
+                    <h2>Impresoras</h2>
+                    <p class="productos-descripcion">
+                        Soluciones prácticas de impresión
+                        para hogares, negocios y oficinas.
+                    </p>
+
+                    <div class="productos-grid">
+
+                        <article class="producto-card">
+                            <img src="img/impresora-multifuncion.jpg"
+                                 alt="Impresora multifunción"
+                                 loading="lazy">
+
+                            <div class="producto-info">
+                                <span class="producto-etiqueta">Impresoras</span>
+                                <h3>Impresora multifunción</h3>
+                                <p>
+                                    Opciones para imprimir,
+                                    copiar y escanear documentos.
+                                </p>
+                                <a href="mailto:tecnotechec@gmail.com?subject=Consulta%20impresora%20multifuncion"
+                                   class="producto-boton">
+                                    Consultar disponibilidad
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="producto-card">
+                            <img src="img/impresora-oficina.jpg"
+                                 alt="Impresora para oficina"
+                                 loading="lazy">
+
+                            <div class="producto-info">
+                                <span class="producto-etiqueta">Impresoras</span>
+                                <h3>Impresora para oficina</h3>
+                                <p>
+                                    Equipos orientados a trabajos
+                                    administrativos y empresariales.
+                                </p>
+                                <a href="mailto:tecnotechec@gmail.com?subject=Consulta%20impresora%20oficina"
+                                   class="producto-boton">
+                                    Consultar disponibilidad
+                                </a>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- CELULARES -->
+            <section id="celulares" class="productos-seccion">
+                <div class="contenedor">
+                    <h2>Celulares</h2>
+                    <p class="productos-descripcion">
+                        Dispositivos móviles para distintas
+                        necesidades y presupuestos.
+                    </p>
+
+                    <div class="productos-grid">
+
+                        <article class="producto-card">
+                            <img src="img/celular-gama-media.jpg"
+                                 alt="Smartphone de gama media"
+                                 loading="lazy">
+
+                            <div class="producto-info">
+                                <span class="producto-etiqueta">Celulares</span>
+                                <h3>Smartphone gama media</h3>
+                                <p>
+                                    Equilibrio entre rendimiento,
+                                    conectividad y funcionalidad.
+                                </p>
+                                <a href="mailto:tecnotechec@gmail.com?subject=Consulta%20celular%20gama%20media"
+                                   class="producto-boton">
+                                    Consultar disponibilidad
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="producto-card">
+                            <img src="img/celular-gama-alta.jpg"
+                                 alt="Smartphone de gama alta"
+                                 loading="lazy">
+
+                            <div class="producto-info">
+                                <span class="producto-etiqueta">Celulares</span>
+                                <h3>Smartphone gama alta</h3>
+                                <p>
+                                    Opciones con características
+                                    avanzadas y alto rendimiento.
+                                </p>
+                                <a href="mailto:tecnotechec@gmail.com?subject=Consulta%20celular%20gama%20alta"
+                                   class="producto-boton">
+                                    Consultar disponibilidad
+                                </a>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- SERVICIOS TÉCNICOS -->
+        <section id="servicios" class="productos-seccion productos-alterno">
+            <div class="contenedor">
+                <h2>Servicios tecnológicos</h2>
+                <p class="productos-descripcion">
+                    Nuestro equipo técnico está preparado
+                    para brindarte asesoría y soporte.
+                </p>
+
+                <div class="productos-servicios-grid">
+
+                    <article class="producto-servicio">
+                        <h3>Servicio técnico</h3>
+                        <p>
+                            Diagnóstico, mantenimiento y reparación
+                            de computadoras y dispositivos electrónicos.
+                        </p>
+                    </article>
+
+                    <article class="producto-servicio">
+                        <h3>Microelectrónica</h3>
+                        <p>
+                            Diagnóstico y reparación especializada
+                            de circuitos y componentes electrónicos.
+                        </p>
+                    </article>
+
+                    <article class="producto-servicio">
+                        <h3>Redes informáticas</h3>
+                        <p>
+                            Instalación, configuración y soporte
+                            de infraestructura de redes.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACTO -->
+        <section class="productos-contacto">
+            <div class="contenedor">
+                <h2>¿Buscas un equipo en particular?</h2>
+                <p>
+                    Nuestro equipo de ventas puede asesorarte
+                    para encontrar la mejor alternativa.
+                </p>
+                <a href="contactos.html" class="btn btn-principal">
+                    Solicitar asesoría
+                </a>
+            </div>
+        </section>
+
     </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="contenedor">
+            <h3>Tecnotech Ecuador</h3>
+            <p>Sucúa - Morona Santiago - Ecuador</p>
+            <p>
+                Correo:
+                <a href="mailto:tecnotechec@gmail.com">
+                    tecnotechec@gmail.com
+                </a>
+            </p>
+            <p>&copy; 2026 Tecnotech Ecuador</p>
+        </div>
+    </footer>
+
 </body>
 </html>
 
