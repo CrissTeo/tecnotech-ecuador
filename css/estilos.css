@@ -1,176 +1,91 @@
-```css
-/* =========================================
-   CONFIGURACIÓN GENERAL
-========================================= */
+/* ======================================
+   PAGINA NOSOTROS
+====================================== */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f4f6f8;
-    color: #20232b;
-    line-height: 1.6;
-}
-
-.contenedor {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-a {
-    text-decoration: none;
-}
-
-/* =========================================
-   ENCABEZADO Y NAVEGACIÓN
-========================================= */
-
-header {
-    background: #ffffff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-    position: relative;
-    z-index: 10;
-}
-
-.encabezado {
-    min-height: 90px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 25px;
-}
-
-.logo img {
-    display: block;
-    width: 170px;
-    max-width: 100%;
-    height: auto;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
-}
-
-nav a {
-    color: #20232b;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-nav a:hover,
-nav a[aria-current="page"] {
-    color: #0879c9;
-}
-
-/* =========================================
-   BANNER DE NOSOTROS
-========================================= */
-
+/* BANNER */
 .nosotros-banner {
-    background: #171a24;
-    color: #ffffff;
+    background: linear-gradient(135deg, #171a24, #343844);
+    color: white;
     text-align: center;
-    padding: 65px 20px;
+    padding: 75px 20px;
 }
 
 .nosotros-banner h1 {
-    font-size: 36px;
+    color: white;
+    font-size: 42px;
     margin-bottom: 15px;
 }
 
 .nosotros-banner p {
-    font-size: 18px;
-    color: #e0e3e8;
+    font-size: 19px;
+    color: #e0e0e0;
 }
 
-/* =========================================
-   QUIÉNES SOMOS
-========================================= */
-
+/* HISTORIA */
 .nosotros-historia {
-    background: #ffffff;
-    padding: 60px 0;
-}
-
-.nosotros-historia h2,
-.nosotros-valores h2,
-.nosotros-equipo h2 {
-    text-align: center;
-    font-size: 30px;
-    margin-bottom: 30px;
-    color: #171a24;
+    background: white;
 }
 
 .nosotros-historia p {
-    max-width: 950px;
-    margin: 0 auto 18px;
-    color: #555555;
-    line-height: 1.9;
+    max-width: 900px;
+    margin: 0 auto 20px;
+    font-size: 17px;
     text-align: justify;
+    color: #444;
 }
 
-/* =========================================
-   MISIÓN Y VISIÓN
-========================================= */
-
+/* MISION Y VISION */
 .nosotros-valores {
-    background: #f4f6f8;
-    padding: 60px 0;
+    background: #eef1f5;
 }
 
 .nosotros-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 25px;
-    align-items: stretch;
+    max-width: 1050px;
+    margin: auto;
 }
 
 .nosotros-card {
-    background: #ffffff;
-    border-radius: 12px;
+    background: white;
     padding: 30px;
+    border-radius: 12px;
     border-top: 4px solid #7b7063;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
-    min-width: 0;
+    transition: transform 0.3s ease;
+}
+
+.nosotros-card:hover {
+    transform: translateY(-5px);
 }
 
 .nosotros-card h3 {
     color: #171a24;
-    font-size: 22px;
     margin-bottom: 15px;
+    font-size: 23px;
 }
 
 .nosotros-card p {
-    color: #555555;
+    color: #555;
     line-height: 1.8;
 }
 
-/* =========================================
+/* ======================================
    EQUIPO ESPECIALIZADO
-========================================= */
+====================================== */
 
 .nosotros-equipo {
     background: #f4f6f8;
-    padding: 60px 0;
 }
 
-.nosotros-equipo .nosotros-intro {
+.nosotros-intro {
     text-align: center;
-    color: #555555;
-    margin: -10px 0 35px;
+    margin-bottom: 35px;
+    color: #555;
 }
 
-/* Distribución: dos columnas y dos filas */
-
+/* Cuadrícula exclusiva para el equipo */
 .nosotros-equipo .nosotros-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -181,40 +96,31 @@ nav a[aria-current="page"] {
 }
 
 /* Tarjetas del equipo */
-
 .nosotros-equipo .nosotros-card {
     position: relative;
     box-sizing: border-box;
     width: 100%;
     min-width: 0;
     min-height: 240px;
-    padding: 25px;
-    padding-top: 30px;
+    padding: 30px;
     overflow: hidden;
-    background: #ffffff;
-    border-radius: 12px;
-    border-top: 4px solid #7b7063;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
-    transition: transform 0.3s ease,
-                box-shadow 0.3s ease;
+    background: white;
 }
 
-/* Imágenes pequeñas en la esquina superior derecha */
-
+/* Imágenes: tamaño fijo y posición superior derecha */
 .nosotros-equipo .nosotros-card img.nosotros-card-imagen {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 25px;
+    right: 25px;
 
     display: block;
-
-    width: 100px;
-    height: 75px;
+    width: 110px;
+    height: 85px;
 
     min-width: 0;
-    max-width: 100px;
+    max-width: 110px;
     min-height: 0;
-    max-height: 75px;
+    max-height: 85px;
 
     margin: 0;
     padding: 0;
@@ -227,7 +133,6 @@ nav a[aria-current="page"] {
 }
 
 /* Números circulares */
-
 .nosotros-equipo .nosotros-icono {
     position: relative;
     z-index: 1;
@@ -236,150 +141,90 @@ nav a[aria-current="page"] {
     height: 48px;
     flex-shrink: 0;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
     background: #171a24;
-    color: #ffffff;
-
+    color: white;
     border-radius: 50%;
-    font-weight: bold;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
     margin-bottom: 20px;
 }
 
-/* Títulos de las especialidades */
-
+/* Títulos */
 .nosotros-equipo .nosotros-card h3 {
     position: relative;
     z-index: 1;
 
     color: #171a24;
-    font-size: 22px;
-    margin: 0 0 15px;
+    margin-bottom: 15px;
+    font-size: 23px;
 }
 
 /* Descripciones */
-
 .nosotros-equipo .nosotros-card p {
     position: relative;
     z-index: 1;
 
-    color: #555555;
+    color: #555;
     line-height: 1.8;
     margin: 0;
 }
 
-/* Efecto al pasar el cursor */
-
-.nosotros-equipo .nosotros-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-}
-
-/* =========================================
-   LLAMADO A LA ACCIÓN
-========================================= */
-
+/* CONTACTO */
 .nosotros-contacto {
-    background: #171a24;
-    color: #ffffff;
+    background: #252933;
     text-align: center;
-    padding: 55px 20px;
+    padding: 65px 20px;
 }
 
 .nosotros-contacto h2 {
-    font-size: 30px;
-    margin-bottom: 15px;
+    color: white;
 }
 
 .nosotros-contacto p {
+    color: #e0e0e0;
     margin-bottom: 25px;
-    color: #e0e3e8;
 }
 
-.btn {
-    display: inline-block;
-    padding: 13px 25px;
-    border-radius: 6px;
-    font-weight: bold;
-    transition: background 0.3s ease;
+.nosotros-contacto .btn {
+    margin-top: 10px;
 }
 
-.btn-principal {
-    background: #0879c9;
-    color: #ffffff;
-}
-
-.btn-principal:hover {
-    background: #075a94;
-}
-
-/* =========================================
-   PIE DE PÁGINA
-========================================= */
-
-footer {
-    background: #11141c;
-    color: #ffffff;
-    text-align: center;
-    padding: 30px 20px;
-}
-
-footer h3 {
-    margin-bottom: 10px;
-}
-
-footer p {
-    margin: 8px 0;
-}
-
-footer a {
-    color: #8bcaff;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* =========================================
-   DISEÑO RESPONSIVO
-========================================= */
-
+/* DISEÑO PARA CELULARES */
 @media (max-width: 768px) {
 
-    .encabezado {
-        flex-direction: column;
-        justify-content: center;
-        padding: 20px 0;
-    }
-
-    nav {
-        gap: 15px;
+    .nosotros-banner {
+        padding: 55px 20px;
     }
 
     .nosotros-banner h1 {
-        font-size: 28px;
+        font-size: 32px;
     }
 
-    .nosotros-historia,
-    .nosotros-valores,
-    .nosotros-equipo {
-        padding: 40px 0;
+    .nosotros-banner p {
+        font-size: 16px;
     }
 
-    .nosotros-historia h2,
-    .nosotros-valores h2,
-    .nosotros-equipo h2 {
-        font-size: 26px;
+    /* Misión y visión */
+    .nosotros-valores .nosotros-grid {
+        grid-template-columns: 1fr;
     }
 
-    /* Una columna para pantallas pequeñas */
+    .nosotros-card {
+        padding: 25px;
+    }
 
-    .nosotros-grid,
+    .nosotros-historia p {
+        text-align: left;
+        font-size: 16px;
+    }
+
+    /* Equipo: una columna en móviles */
     .nosotros-equipo .nosotros-grid {
-        grid-template-columns: minmax(0, 1fr);
+        grid-template-columns: 1fr;
         gap: 20px;
     }
 
@@ -388,59 +233,18 @@ footer a:hover {
         padding: 25px;
     }
 
-    /* Imágenes más pequeñas en móviles */
-
+    /* Imágenes reducidas en móviles */
     .nosotros-equipo .nosotros-card img.nosotros-card-imagen {
         top: 20px;
         right: 20px;
-
         width: 85px;
         height: 65px;
-
         max-width: 85px;
         max-height: 65px;
     }
 
     .nosotros-equipo .nosotros-card h3 {
         font-size: 20px;
-    }
-
-    .nosotros-contacto h2 {
-        font-size: 25px;
-    }
-}
-
-/* =========================================
-   CELULARES PEQUEÑOS
-========================================= */
-
-@media (max-width: 400px) {
-
-    .contenedor {
-        width: 92%;
-    }
-
-    nav {
-        gap: 12px;
-    }
-
-    nav a {
-        font-size: 14px;
-    }
-
-    .nosotros-equipo .nosotros-card {
-        padding: 20px;
-    }
-
-    .nosotros-equipo .nosotros-card img.nosotros-card-imagen {
-        top: 15px;
-        right: 15px;
-
-        width: 75px;
-        height: 60px;
-
-        max-width: 75px;
-        max-height: 60px;
     }
 }
 ```
