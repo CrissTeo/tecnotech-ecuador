@@ -1,3 +1,8 @@
+```css
+/* =========================================
+   CONFIGURACIÓN GENERAL
+========================================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -5,197 +10,321 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f6f8;
-    color: #1e1e1e;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f8;
+    color: #20232b;
     line-height: 1.6;
 }
 
 .contenedor {
     width: 90%;
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
 }
 
-/* HEADER */
+a {
+    text-decoration: none;
+}
+
+/* =========================================
+   ENCABEZADO Y NAVEGACIÓN
+========================================= */
+
 header {
-    background-color: #171a24;
-    padding: 18px 0;
-    border-bottom: 4px solid #7b7063;
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    position: relative;
+    z-index: 10;
 }
 
 .encabezado {
+    min-height: 90px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 25px;
 }
 
 .logo img {
-    max-width: 260px;
-    height: auto;
     display: block;
+    width: 170px;
+    max-width: 100%;
+    height: auto;
 }
 
 nav {
     display: flex;
-    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
     flex-wrap: wrap;
 }
 
 nav a {
+    color: #20232b;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+    color: #0879c9;
+}
+
+/* =========================================
+   BANNER DE NOSOTROS
+========================================= */
+
+.nosotros-banner {
+    background: #171a24;
     color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
-}
-
-nav a:hover {
-    color: #c7b7a3;
-}
-
-/* HERO */
-.hero {
-    background: linear-gradient(to right, #171a24, #2a2f3d);
-    color: white;
-    padding: 70px 0;
-}
-
-.hero-contenido {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-.hero-texto {
-    flex: 1;
-    min-width: 280px;
-}
-
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 20px;
-    margin-bottom: 30px;
-    max-width: 600px;
-}
-
-.hero-imagen {
-    flex: 1;
-    min-width: 280px;
     text-align: center;
+    padding: 65px 20px;
 }
 
-.hero-imagen img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 16px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+.nosotros-banner h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
 }
 
-/* BOTONES */
-.botones {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
+.nosotros-banner p {
+    font-size: 18px;
+    color: #e0e3e8;
 }
 
-.btn {
-    text-decoration: none;
-    padding: 14px 24px;
-    border-radius: 8px;
-    font-weight: bold;
-    display: inline-block;
-}
+/* =========================================
+   QUIÉNES SOMOS
+========================================= */
 
-.btn-principal {
-    background-color: #7b7063;
-    color: white;
-}
-
-.btn-principal:hover {
-    background-color: #655b50;
-}
-
-.btn-secundario {
-    background-color: white;
-    color: #171a24;
-}
-
-.btn-secundario:hover {
-    background-color: #dddddd;
-}
-
-/* SECCIONES */
-section {
+.nosotros-historia {
+    background: #ffffff;
     padding: 60px 0;
 }
 
-section h2 {
+.nosotros-historia h2,
+.nosotros-valores h2,
+.nosotros-equipo h2 {
     text-align: center;
-    margin-bottom: 35px;
-    font-size: 32px;
+    font-size: 30px;
+    margin-bottom: 30px;
     color: #171a24;
 }
 
-/* TARJETAS */
-.tarjetas {
-    display: flex;
+.nosotros-historia p {
+    max-width: 950px;
+    margin: 0 auto 18px;
+    color: #555555;
+    line-height: 1.9;
+    text-align: justify;
+}
+
+/* =========================================
+   MISIÓN Y VISIÓN
+========================================= */
+
+.nosotros-valores {
+    background: #f4f6f8;
+    padding: 60px 0;
+}
+
+.nosotros-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 25px;
-    justify-content: center;
-    flex-wrap: wrap;
+    align-items: stretch;
 }
 
-.tarjeta {
-    background-color: white;
-    width: 300px;
-    padding: 20px;
+.nosotros-card {
+    background: #ffffff;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    text-align: center;
+    padding: 30px;
+    border-top: 4px solid #7b7063;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    min-width: 0;
 }
 
-.tarjeta img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-
-.tarjeta h3 {
-    margin-bottom: 15px;
+.nosotros-card h3 {
     color: #171a24;
+    font-size: 22px;
+    margin-bottom: 15px;
 }
 
-.tarjeta p {
-    color: #555;
+.nosotros-card p {
+    color: #555555;
+    line-height: 1.8;
 }
 
-.servicios {
-    background-color: #eef1f5;
+/* =========================================
+   EQUIPO ESPECIALIZADO
+========================================= */
+
+.nosotros-equipo {
+    background: #f4f6f8;
+    padding: 60px 0;
 }
 
-.empresa p {
-    max-width: 900px;
-    margin: auto;
+.nosotros-equipo .nosotros-intro {
     text-align: center;
-    font-size: 18px;
-    color: #444;
+    color: #555555;
+    margin: -10px 0 35px;
 }
 
-/* FOOTER */
+/* Distribución: dos columnas y dos filas */
+
+.nosotros-equipo .nosotros-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 1050px;
+    margin: 0 auto;
+    align-items: stretch;
+}
+
+/* Tarjetas del equipo */
+
+.nosotros-equipo .nosotros-card {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    min-height: 240px;
+    padding: 25px;
+    padding-top: 30px;
+    overflow: hidden;
+    background: #ffffff;
+    border-radius: 12px;
+    border-top: 4px solid #7b7063;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+/* Imágenes pequeñas en la esquina superior derecha */
+
+.nosotros-equipo .nosotros-card img.nosotros-card-imagen {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    display: block;
+
+    width: 100px;
+    height: 75px;
+
+    min-width: 0;
+    max-width: 100px;
+    min-height: 0;
+    max-height: 75px;
+
+    margin: 0;
+    padding: 0;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 7px;
+    z-index: 0;
+}
+
+/* Números circulares */
+
+.nosotros-equipo .nosotros-icono {
+    position: relative;
+    z-index: 1;
+
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #171a24;
+    color: #ffffff;
+
+    border-radius: 50%;
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+/* Títulos de las especialidades */
+
+.nosotros-equipo .nosotros-card h3 {
+    position: relative;
+    z-index: 1;
+
+    color: #171a24;
+    font-size: 22px;
+    margin: 0 0 15px;
+}
+
+/* Descripciones */
+
+.nosotros-equipo .nosotros-card p {
+    position: relative;
+    z-index: 1;
+
+    color: #555555;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* Efecto al pasar el cursor */
+
+.nosotros-equipo .nosotros-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================================
+   LLAMADO A LA ACCIÓN
+========================================= */
+
+.nosotros-contacto {
+    background: #171a24;
+    color: #ffffff;
+    text-align: center;
+    padding: 55px 20px;
+}
+
+.nosotros-contacto h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.nosotros-contacto p {
+    margin-bottom: 25px;
+    color: #e0e3e8;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn-principal {
+    background: #0879c9;
+    color: #ffffff;
+}
+
+.btn-principal:hover {
+    background: #075a94;
+}
+
+/* =========================================
+   PIE DE PÁGINA
+========================================= */
+
 footer {
-    background-color: #171a24;
-    color: white;
+    background: #11141c;
+    color: #ffffff;
     text-align: center;
-    padding: 35px 20px;
+    padding: 30px 20px;
 }
 
 footer h3 {
@@ -207,719 +336,50 @@ footer p {
 }
 
 footer a {
-    color: #c7b7a3;
-    text-decoration: none;
+    color: #8bcaff;
 }
 
 footer a:hover {
     text-decoration: underline;
 }
 
-/* RESPONSIVE */
+/* =========================================
+   DISEÑO RESPONSIVO
+========================================= */
+
 @media (max-width: 768px) {
+
     .encabezado {
         flex-direction: column;
-        text-align: center;
+        justify-content: center;
+        padding: 20px 0;
     }
 
     nav {
-        justify-content: center;
-    }
-
-    .hero {
-        text-align: center;
-        padding: 50px 0;
-    }
-
-    .hero h1 {
-        font-size: 34px;
-    }
-
-    .hero p {
-        font-size: 17px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .botones {
-        justify-content: center;
-    }
-
-    .logo img {
-        max-width: 220px;
-    }
-}
-
-/* ======================================
-   PAGINA NOSOTROS
-====================================== */
-
-/* BANNER */
-.nosotros-banner {
-    background: linear-gradient(135deg, #171a24, #343844);
-    color: white;
-    text-align: center;
-    padding: 75px 20px;
-}
-
-.nosotros-banner h1 {
-    color: white;
-    font-size: 42px;
-    margin-bottom: 15px;
-}
-
-.nosotros-banner p {
-    font-size: 19px;
-    color: #e0e0e0;
-}
-
-/* HISTORIA */
-.nosotros-historia {
-    background: white;
-}
-
-.nosotros-historia p {
-    max-width: 900px;
-    margin: 0 auto 20px;
-    font-size: 17px;
-    text-align: justify;
-    color: #444;
-}
-
-/* MISION Y VISION */
-.nosotros-valores {
-    background: #eef1f5;
-}
-
-.nosotros-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 25px;
-    max-width: 1050px;
-    margin: auto;
-}
-
-.nosotros-card {
-    background: white;
-    padding: 30px;
-    border-radius: 12px;
-    border-top: 4px solid #7b7063;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
-    transition: transform 0.3s ease;
-}
-
-.nosotros-card:hover {
-    transform: translateY(-5px);
-}
-
-.nosotros-card h3 {
-    color: #171a24;
-    margin-bottom: 15px;
-    font-size: 23px;
-}
-
-.nosotros-card p {
-    color: #555;
-    line-height: 1.8;
-}
-
-/* EQUIPO */
-.nosotros-equipo {
-    background: #f4f6f8;
-}
-
-.nosotros-intro {
-    text-align: center;
-    margin-bottom: 35px;
-    color: #555;
-}
-
-.nosotros-icono {
-    width: 48px;
-    height: 48px;
-    background: #171a24;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-/* CONTACTO */
-.nosotros-contacto {
-    background: #252933;
-    text-align: center;
-    padding: 65px 20px;
-}
-
-.nosotros-contacto h2 {
-    color: white;
-}
-
-.nosotros-contacto p {
-    color: #e0e0e0;
-    margin-bottom: 25px;
-}
-
-.nosotros-contacto .btn {
-    margin-top: 10px;
-}
-
-/* DISEÑO PARA CELULARES */
-@media (max-width: 768px) {
-
-    .nosotros-banner {
-        padding: 55px 20px;
+        gap: 15px;
     }
 
     .nosotros-banner h1 {
-        font-size: 32px;
+        font-size: 28px;
     }
 
-    .nosotros-banner p {
-        font-size: 16px;
+    .nosotros-historia,
+    .nosotros-valores,
+    .nosotros-equipo {
+        padding: 40px 0;
     }
 
-    .nosotros-grid {
-        grid-template-columns: 1fr;
+    .nosotros-historia h2,
+    .nosotros-valores h2,
+    .nosotros-equipo h2 {
+        font-size: 26px;
     }
 
-    .nosotros-card {
-        padding: 25px;
-    }
+    /* Una columna para pantallas pequeñas */
 
-    .nosotros-historia p {
-        text-align: left;
-        font-size: 16px;
-    }
-}
-
-
-/* =========================================
-   PAGINA PRODUCTOS - TECNOTECH ECUADOR
-========================================= */
-
-/* BANNER PRINCIPAL */
-.productos-banner {
-    background: linear-gradient(135deg, #171a24, #343844);
-    text-align: center;
-    color: white;
-    padding: 75px 20px;
-}
-
-.productos-banner h1 {
-    font-size: 42px;
-    margin-bottom: 15px;
-}
-
-.productos-banner p {
-    font-size: 19px;
-    color: #e0e0e0;
-    margin-bottom: 30px;
-}
-
-/* MENU DE CATEGORIAS */
-.productos-navegacion {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    padding: 25px 0;
-}
-
-.productos-navegacion a {
-    background: white;
-    color: #171a24;
-    padding: 10px 22px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    transition: 0.3s;
-}
-
-.productos-navegacion a:hover {
-    background: #7b7063;
-    color: white;
-}
-
-/* SECCIONES DEL CATALOGO */
-.productos-seccion {
-    padding: 60px 0;
-    background: #ffffff;
-    scroll-margin-top: 15px;
-}
-
-.productos-alterno {
-    background: #eef1f5;
-}
-
-.productos-descripcion {
-    text-align: center;
-    max-width: 700px;
-    margin: -15px auto 40px;
-    color: #666;
-    font-size: 17px;
-}
-
-/* CUADRICULA DE PRODUCTOS */
-.productos-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 30px;
-    max-width: 950px;
-    margin: 0 auto;
-}
-
-/* TARJETAS DE PRODUCTOS */
-.producto-card {
-    background: white;
-    border-radius: 14px;
-    overflow: hidden;
-    box-shadow: 0 5px 18px rgba(0,0,0,0.08);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.producto-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.14);
-}
-
-.producto-card img {
-    width: 100%;
-    height: 260px;
-    object-fit: contain;
-    background: #f9fafb;
-    padding: 20px;
-    display: block;
-}
-
-.producto-info {
-    padding: 25px;
-}
-
-.producto-etiqueta {
-    display: inline-block;
-    background: #ebe5df;
-    color: #60564c;
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: bold;
-    margin-bottom: 12px;
-}
-
-.producto-info h3 {
-    font-size: 23px;
-    color: #171a24;
-    margin-bottom: 12px;
-}
-
-.producto-info p {
-    color: #555;
-    margin-bottom: 22px;
-    min-height: 52px;
-}
-
-.producto-boton {
-    display: inline-block;
-    padding: 12px 18px;
-    background: #7b7063;
-    color: white;
-    border-radius: 7px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s;
-}
-
-.producto-boton:hover {
-    background: #554c43;
-}
-
-/* SERVICIOS TECNOLOGICOS */
-.productos-servicios-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 25px;
-}
-
-.producto-servicio {
-    background: white;
-    padding: 30px;
-    border-radius: 12px;
-    border-top: 4px solid #7b7063;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-}
-
-.producto-servicio h3 {
-    color: #171a24;
-    margin-bottom: 15px;
-}
-
-.producto-servicio p {
-    color: #555;
-}
-
-/* LLAMADO A LA ACCION */
-.productos-contacto {
-    background: #252933;
-    color: white;
-    text-align: center;
-    padding: 65px 20px;
-}
-
-.productos-contacto h2 {
-    color: white;
-}
-
-.productos-contacto p {
-    margin-bottom: 30px;
-    color: #e0e0e0;
-}
-
-/* ADAPTACION PARA TABLETS */
-@media (max-width: 900px) {
-    .productos-servicios-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
-/* ADAPTACION PARA CELULARES */
-@media (max-width: 768px) {
-    .productos-banner {
-        padding: 55px 20px;
-    }
-
-    .productos-banner h1 {
-        font-size: 32px;
-    }
-
-    .productos-banner p {
-        font-size: 16px;
-    }
-
-    .productos-grid,
-    .productos-servicios-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .producto-card img {
-        height: 220px;
-    }
-
-    .producto-info h3 {
-        font-size: 21px;
-    }
-
-    .productos-navegacion a {
-        font-size: 14px;
-        padding: 9px 15px;
-    }
-}
-
-
-/* =========================================
-   PAGINA CONTACTOS - TECNOTECH ECUADOR
-========================================= */
-
-/* BANNER PRINCIPAL */
-.contactos-banner {
-    background: linear-gradient(135deg, #171a24, #343844);
-    color: white;
-    text-align: center;
-    padding: 75px 20px;
-}
-
-.contactos-banner h1 {
-    color: white;
-    font-size: 42px;
-    margin-bottom: 15px;
-}
-
-.contactos-banner p {
-    font-size: 19px;
-    color: #e0e0e0;
-    max-width: 750px;
-    margin: auto;
-}
-
-/* INFORMACION DE CONTACTO */
-.contactos-informacion {
-    background: #f4f6f8;
-    padding: 65px 0;
-}
-
-.contactos-intro {
-    text-align: center;
-    max-width: 750px;
-    margin: -15px auto 40px;
-    color: #555;
-    font-size: 17px;
-}
-
-/* TARJETAS DE CONTACTO */
-.contactos-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 25px;
-}
-
-.contacto-card {
-    background-color: white;
-    padding: 35px 25px;
-    border-radius: 14px;
-    border-top: 4px solid #7b7063;
-    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
-    text-align: center;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    transition: transform 0.3s ease,
-                box-shadow 0.3s ease;
-}
-
-.contacto-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.13);
-}
-
-/* ICONOS */
-.contacto-icono {
-    width: 65px;
-    height: 65px;
-    background: #171a24;
-    color: white;
-    border-radius: 50%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 30px;
-    margin-bottom: 22px;
-}
-
-/* TEXTOS DE TARJETAS */
-.contacto-card h3 {
-    font-size: 22px;
-    color: #171a24;
-    margin-bottom: 15px;
-}
-
-.contacto-card p {
-    color: #555;
-    font-size: 16px;
-    margin-bottom: 20px;
-}
-
-/* BOTONES */
-.contacto-boton {
-    display: inline-block;
-    background: #7b7063;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 15px;
-
-    padding: 13px 22px;
-    border-radius: 8px;
-
-    margin-top: auto;
-    transition: background 0.3s ease;
-}
-
-.contacto-boton:hover {
-    background: #554c43;
-}
-
-/* DATOS DE CONTACTO */
-.contacto-card .contacto-dato {
-    font-size: 14px;
-    color: #777;
-    margin-top: 18px;
-    margin-bottom: 0;
-    overflow-wrap: anywhere;
-}
-
-/* GOOGLE MAPS */
-.contactos-mapa {
-    background: white;
-    padding: 70px 0;
-    scroll-margin-top: 15px;
-}
-
-.mapa-contenedor {
-    width: 100%;
-    border-radius: 16px;
-    overflow: hidden;
-
-    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.12);
-}
-
-.mapa-contenedor iframe {
-    display: block;
-    width: 100%;
-    height: 430px;
-    border: 0;
-}
-
-.mapa-acciones {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-}
-
-/* SECCION DE ASESORIA */
-.contactos-cta {
-    background: #252933;
-    color: white;
-    text-align: center;
-    padding: 70px 20px;
-}
-
-.contactos-cta h2 {
-    color: white;
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-.contactos-cta p {
-    max-width: 750px;
-    margin: 0 auto 30px;
-    color: #e0e0e0;
-    font-size: 17px;
-}
-
-/* DISEÑO PARA TABLETS */
-@media (max-width: 900px) {
-
-    .contactos-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-}
-
-/* DISEÑO PARA CELULARES */
-@media (max-width: 768px) {
-
-    .contactos-banner {
-        padding: 55px 20px;
-    }
-
-    .contactos-banner h1 {
-        font-size: 32px;
-    }
-
-    .contactos-banner p {
-        font-size: 16px;
-    }
-
-    .contactos-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .contacto-card {
-        padding: 30px 20px;
-    }
-
-    .contactos-intro {
-        font-size: 16px;
-    }
-
-    .mapa-contenedor iframe {
-        height: 330px;
-    }
-
-    .contactos-cta {
-        padding: 55px 20px;
-    }
-
-    .contactos-cta h2 {
-        font-size: 27px;
-    }
-
-    .contactos-cta p {
-        font-size: 16px;
-    }
-
-}
-
-/* DISTRIBUCIÓN DE LAS TARJETAS DEL EQUIPO */
-.nosotros-equipo .nosotros-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 30px 24px;
-    align-items: stretch;
-}
-
-/* TARJETAS */
-.nosotros-equipo .nosotros-card {
-    position: relative;
-    box-sizing: border-box;
-    min-width: 0;
-    min-height: 240px;
-    height: 100%;
-    padding: 30px;
-    overflow: hidden;
-}
-
-/* IMÁGENES PEQUEÑAS EN LA ESQUINA SUPERIOR DERECHA */
-.nosotros-equipo .nosotros-card-imagen {
-    position: absolute;
-    top: 25px;
-    right: 25px;
-
-    width: 100px;
-    height: 80px;
-
-    max-width: 100%;
-    object-fit: cover;
-    object-position: center;
-
-    border-radius: 8px;
-    z-index: 0;
-}
-
-/* NÚMEROS */
-.nosotros-equipo .nosotros-icono {
-    position: relative;
-    z-index: 1;
-
-    width: 48px;
-    height: 48px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    margin: 0 0 24px 0;
-    border-radius: 50%;
-}
-
-/* TÍTULOS */
-.nosotros-equipo .nosotros-card h3 {
-    position: relative;
-    z-index: 1;
-    margin: 0 0 16px;
-}
-
-/* DESCRIPCIONES */
-.nosotros-equipo .nosotros-card p {
-    position: relative;
-    z-index: 1;
-    margin: 0;
-    line-height: 1.8;
-}
-
-/* ADAPTACIÓN A MÓVILES */
-@media (max-width: 768px) {
+    .nosotros-grid,
     .nosotros-equipo .nosotros-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
         gap: 20px;
     }
 
@@ -928,10 +388,59 @@ footer a:hover {
         padding: 25px;
     }
 
-    .nosotros-equipo .nosotros-card-imagen {
+    /* Imágenes más pequeñas en móviles */
+
+    .nosotros-equipo .nosotros-card img.nosotros-card-imagen {
         top: 20px;
         right: 20px;
+
         width: 85px;
-        height: 70px;
+        height: 65px;
+
+        max-width: 85px;
+        max-height: 65px;
+    }
+
+    .nosotros-equipo .nosotros-card h3 {
+        font-size: 20px;
+    }
+
+    .nosotros-contacto h2 {
+        font-size: 25px;
     }
 }
+
+/* =========================================
+   CELULARES PEQUEÑOS
+========================================= */
+
+@media (max-width: 400px) {
+
+    .contenedor {
+        width: 92%;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .nosotros-equipo .nosotros-card {
+        padding: 20px;
+    }
+
+    .nosotros-equipo .nosotros-card img.nosotros-card-imagen {
+        top: 15px;
+        right: 15px;
+
+        width: 75px;
+        height: 60px;
+
+        max-width: 75px;
+        max-height: 60px;
+    }
+}
+```
