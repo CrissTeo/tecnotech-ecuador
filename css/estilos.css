@@ -49,7 +49,6 @@ nav a {
     text-decoration: none;
     font-weight: bold;
     font-size: 16px;
-    transition: 0.3s;
 }
 
 nav a:hover {
@@ -60,29 +59,47 @@ nav a:hover {
 .hero {
     background: linear-gradient(to right, #171a24, #2a2f3d);
     color: white;
-    padding: 80px 0;
+    padding: 70px 0;
 }
 
 .hero-contenido {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
 }
 
 .hero-texto {
-    max-width: 700px;
+    flex: 1;
+    min-width: 280px;
 }
 
 .hero h1 {
-    font-size: 42px;
+    font-size: 48px;
     margin-bottom: 20px;
 }
 
 .hero p {
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom: 30px;
+    max-width: 600px;
 }
 
+.hero-imagen {
+    flex: 1;
+    min-width: 280px;
+    text-align: center;
+}
+
+.hero-imagen img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* BOTONES */
 .botones {
     display: flex;
     gap: 15px;
@@ -127,6 +144,7 @@ section h2 {
     color: #171a24;
 }
 
+/* TARJETAS */
 .tarjetas {
     display: flex;
     gap: 25px;
@@ -136,11 +154,19 @@ section h2 {
 
 .tarjeta {
     background-color: white;
-    width: 260px;
-    padding: 25px;
+    width: 300px;
+    padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     text-align: center;
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
 }
 
 .tarjeta h3 {
@@ -201,16 +227,18 @@ footer a:hover {
     }
 
     .hero {
-        padding: 60px 0;
         text-align: center;
+        padding: 50px 0;
     }
 
     .hero h1 {
-        font-size: 32px;
+        font-size: 34px;
     }
 
     .hero p {
-        font-size: 16px;
+        font-size: 17px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .botones {
